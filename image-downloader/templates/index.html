@@ -1,0 +1,89 @@
+<html>     
+    <head>
+        <title>Downloader</title>
+        <style>
+            /* CSS CODE */
+
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+              background-color: #222428;
+            }
+
+            .title {
+                padding-top: 20vh;
+                font-size: 70px;
+                color: #487CFF;
+                font-family: "Montserrat", sans-serif;
+                text-align: center;
+            }
+
+            .cont{
+                padding-top: 4vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .url {
+                background-color: #2B2E36;
+                width: 70vh;
+                height: 48px;
+                border-radius: 12px;
+                border: none;
+                outline: none;
+                padding-left: 12px;
+            }
+
+            .button-container{
+                padding-top: 2vh;
+            }
+
+            .submit-button {
+                padding-top: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 20px;
+                background-color: #2B2E36;
+                border: none;
+                outline: none;
+                border-radius: 20px;
+            }
+
+            .submit-button:hover{
+                background-color: #487CFF;
+                color: #fff;
+            }
+
+            .fill-outs{
+                padding-top: 6vh;
+                text-align: center;
+            }
+
+            .fill {
+                color: #487CFF;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="title">Image-Downloader</h1>
+        
+        <form class="cont" method="POST" action="/">
+            <input type="text" class="url" id="url" name="url" required placeholder="Enter URL ... ">
+            <div class="button-container">
+                <button class="submit-button" type="submit">Download</button>
+            </div>
+        </form>
+
+        <div class="fill-outs">
+            <h1 class="fill"> {{ progress }} </h1>
+        </div>
+
+    </body>
+</html>
